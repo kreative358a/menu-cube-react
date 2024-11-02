@@ -66,6 +66,14 @@ html {
     --swiper-pagination-bullet-width: 20px;    
     --swiper-pagination-bullet-height: 20px;
     --swiper-pagination-bullet-color: #fff;
+    --swiper-position: absolute;
+    --swiper-left: 50%;
+    --swiper-top: 50%;
+    --swiper-margin-left: -240px;
+    --swiper-margin-top: -210px;
+    --swiper-height-500: 60%;
+    --swiper-width-500: 98%;
+    --swiper-margin-left-500: -49%;
 }
 
 body {
@@ -414,16 +422,20 @@ ul {
   } */
 }
 
+/* .elements-view {
+  justify-content: center;
+  display: grid;
+} */
 
 .swiper {
   width: 480px;
   height: 540px;
   max-height: 540px;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -240px;
-  margin-top: -210px; */
+  /* position: var(--swiper-position); */
+  /* left: 50%;
+  top: 50%; */
+  /* margin-left: var(--swiper-margin-left); */
+  /* margin-top: var(--swiper-margin-top); */
   z-index: 0;
 }
 
@@ -503,13 +515,13 @@ ul {
   }
   .swiper {
     width: 98%;
-    height: 60%;
-    max-height: 60%;
+    height: 540px;
+    /* margin-left: var(--swiper-margin-left-500);
+    position: var(--swiper-position);
     left: 50%;
-
-    margin-left: -49%;
-    top: 30%;
+    top: 50%;     */
     /* margin-top: -30%; */
+    /* margin-top: 50%; */
   }
 
   /* .swiper-slide {
