@@ -21,6 +21,8 @@ const MenuCube = ({ items }) => {
         shadow: true,
         slideShadows: true,
       }}
+      edgeSwipeDetection={true}
+      touchReleaseOnEdges={true}
       pagination={pagination}
       navigation
       modules={[EffectCube, Pagination, Navigation]}

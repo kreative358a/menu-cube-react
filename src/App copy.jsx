@@ -38,7 +38,6 @@ const App = () => {
   const [view, setView] = useState(null)
   const [currentBtn, setCurrentBtn] = useState(0);
 
-  // console.log('categories:')
   // login
   const listGallery = () => {
     // normally connect to db or api
@@ -53,22 +52,19 @@ const App = () => {
   const filterItems = (category) => {
     if (category === 'all') {
       setMenuItems(items);
-      setCurrentBtn(0)
       return;
     }
     // newItems są równe oryginalnym items, jeżeli item.category odpowiada category wtedy return
     const newItems = items.filter((item) => item.category === category);
     // przekazujemy newItems
     setMenuItems(newItems);
-    setCurrentBtn(categories.indexOf(category))
-    // console.log('categories.indexOf(category): ',categories.indexOf(category))
   };  
 
   return (
     <main>
       <section>
         <Title text="our menu" />
-        <Categories categories={categories} filterItems={filterItems} currentBtn={currentBtn}/>
+        <Categories categories={categories} filterItems={filterItems} />
         
         {view ? (
           <div className='elements-view'>

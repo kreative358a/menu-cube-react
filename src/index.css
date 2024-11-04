@@ -41,6 +41,7 @@ html {
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
+  --green-middle: #1a7e4f;
   --green-dark: #0f5132;
 
   --small-text: 0.875rem;
@@ -163,6 +164,18 @@ ul {
 .btn:hover {
   background: var(--primary-700);
   box-shadow: var(--shadow-3);
+}
+
+.btn:active {
+  background: var(--green-dark);
+}
+
+.btn-active {
+  background: var(--green-middle);
+}
+
+.btn-active:hover {
+  background: var(--green-dark);
 }
 
 .btn-gallery {

@@ -1,15 +1,17 @@
 /* eslint-disable react/prop-types */
 
-const Categories = ({ categories, filterItems }) => {
+const Categories = ({ categories, filterItems, currentBtn }) => {
   return (
     <div className='btn-container'>
-      {categories.map((category) => {
+      {categories.map((category, index) => {
+        console.log('currentBtn: ', currentBtn)
         return (
           <button
             type='button'
-            className='btn'
+            // className='btn'
             key={category}
             onClick={() => filterItems(category)}
+            className={index === currentBtn ? 'btn btn-active' : 'btn'}
           >
             {category}
           </button>
